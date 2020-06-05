@@ -60,4 +60,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`username`, `password`) VALUES
 ('aljodomo',	'fimadmin');
 
+CREATE USER 'pathfinder_client'@'%' IDENTIFIED BY '';
+GRANT DELETE, INSERT, SELECT, SHOW VIEW, UPDATE ON `pathfinder`.* TO 'pathfinder_client'@'%';
+
 -- 2020-06-05 15:36:56
